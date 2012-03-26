@@ -65,6 +65,7 @@ rm -fr html/.doctrees html/.buildinfo
 %doc html
 
 %changelog
+* Fri Mar 23 2012 Alan Pevec <apevec@redhat.com> 2012.1-0.4.rc1
 - Include LICENSE (#732695)
 
 * Thu Mar 22 2012 Pádraig Brady <P@draigBrady.com> 2012.1-0.4.rc1
