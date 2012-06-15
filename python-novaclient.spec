@@ -49,7 +49,7 @@ This package contains auto-generated documentation.
 rm -fr %{buildroot}%{python_sitelib}/tests
 
 export PYTHONPATH="$( pwd ):$PYTHONPATH"
-sphinx-build -b html docs html
+sphinx-build -b html doc/source html
 
 # Fix hidden-file-or-dir warnings
 rm -fr html/.doctrees html/.buildinfo
@@ -65,6 +65,9 @@ rm -fr html/.doctrees html/.buildinfo
 %doc html
 
 %changelog
+* Fri Jun 15 2012 Dan Prince <dprince@redhat.com> 2012.2-0.1.f2
+- Update to use latest doc/source directory.
+
 * Wed Jun 13 2012 Pádraig Brady <P@draigBrady.com> 2012.2-0.1.f1
 - Update to folsom-1 release
 
