@@ -1,12 +1,12 @@
 Name:             python-novaclient
-Version:          2012.1
-Release:          0.4.rc1%{?dist}
+Version:          2012.2
+Release:          0.1.f1%{?dist}
 Summary:          Python API and CLI for OpenStack Nova
 
 Group:            Development/Languages
 License:          ASL 2.0
 URL:              http://pypi.python.org/pypi/python-novaclient
-Source0:          http://launchpad.net/nova/essex/essex-rc1/+download/python-novaclient-%{version}~rc1.tar.gz
+Source0:          https://launchpad.net/nova/folsom/folsom-1/+download/python-novaclient-%{version}~f1.tar.gz
 
 BuildArch:        noarch
 BuildRequires:    python-setuptools
@@ -65,7 +65,10 @@ rm -fr html/.doctrees html/.buildinfo
 %doc html
 
 %changelog
-* Fri Mar 23 2012 Alan Pevec <apevec@redhat.com> 2012.1-0.4.rc1
+* Wed Jun 13 2012 Pádraig Brady <P@draigBrady.com> 2012.2-0.1.f1
+- Update to folsom-1 release
+
+* Sun Apr  8 2012 Pádraig Brady <P@draigBrady.com> 2012.1-1
 - Include LICENSE (#732695)
 
 * Thu Mar 22 2012 Pádraig Brady <P@draigBrady.com> 2012.1-0.4.rc1
