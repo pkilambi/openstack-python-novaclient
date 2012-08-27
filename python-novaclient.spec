@@ -47,6 +47,7 @@ sed -e 's|^prettytable.*|prettytable|' -i tools/pip-requires
 
 %install
 %{__python} setup.py install -O1 --skip-build --root %{buildroot}
+mv %{buildroot}/usr/novaclient/versioninfo %{buildroot}%{python_sitelib}/novaclient/versioninfo
 
 # Delete tests
 rm -fr %{buildroot}%{python_sitelib}/tests
@@ -62,12 +63,16 @@ rm -fr html/.doctrees html/.buildinfo
 %doc LICENSE
 %{_bindir}/nova
 %{python_sitelib}/novaclient
+%{python_sitelib}/novaclient/versioninfo
 %{python_sitelib}/*.egg-info
 
 %files doc
 %doc html
 
 %changelog
+* Mon Aug 27 2012 Dan Prince <dprince@redhat.com> 2012.2-0.1.f2
+- Add versioninfo to package.
+
 * Tue Jun 26 2012 Dan Prince <dprince@redhat.com> 2012.2-0.1.f2
 - Avoid nailing prettytable version in pip-requires.
 
