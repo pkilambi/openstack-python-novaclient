@@ -39,9 +39,6 @@ This package contains auto-generated documentation.
 %prep
 %setup -q
 
-# avoid requiring prettytable 0.6.0 for now
-sed -e 's|^prettytable.*|prettytable|' -i tools/pip-requires
-
 %build
 %{__python} setup.py build
 
@@ -72,9 +69,6 @@ rm -fr html/.doctrees html/.buildinfo
 %changelog
 * Mon Aug 27 2012 Dan Prince <dprince@redhat.com> 2012.2-0.1.f2
 - Add versioninfo to package.
-
-* Tue Jun 26 2012 Dan Prince <dprince@redhat.com> 2012.2-0.1.f2
-- Avoid nailing prettytable version in pip-requires.
 
 * Fri Jun 15 2012 Dan Prince <dprince@redhat.com> 2012.2-0.1.f2
 - Update to use latest doc/source directory.
