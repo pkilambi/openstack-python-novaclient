@@ -28,7 +28,7 @@ the OpenStack Nova API.
 Summary:          Documentation for OpenStack Nova API Client
 Group:            Documentation
 
-BuildRequires:    python-sphinx
+BuildRequires:    python-sphinx10
 
 %description      doc
 This is a client for the OpenStack Nova API. There's a Python API (the
@@ -57,7 +57,7 @@ install -pm 644 tools/nova.bash_completion %{buildroot}%{_sysconfdir}/bash_compl
 rm -fr %{buildroot}%{python_sitelib}/tests
 
 export PYTHONPATH="$( pwd ):$PYTHONPATH"
-sphinx-build -b html doc/source html
+sphinx-1.0-build -b html doc/source html
 
 # Fix hidden-file-or-dir warnings
 rm -fr html/.doctrees html/.buildinfo
@@ -84,36 +84,15 @@ rm -fr html/.doctrees html/.buildinfo
 * Thu Sep 27 2012 Pádraig Brady <P@draigBrady.com> 1:2.9.0-1
 - Update to latest upstream release (aligned with Folsom)
 
-* Tue Sep 25 2012 Pádraig Brady <P@draigBrady.com> 1:2.8.0.26-2
-- Update to latest upstream release
-
-* Wed Aug 22 2012 Pádraig Brady <P@draigBrady.com> 2012.2-0.3.f1
+* Wed Aug 22 2012 Pádraig Brady <P@draigBrady.com> 2012.1-2
 - Add dependency on python-setuptools (#849477)
 
-* Sat Jul 21 2012 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 2012.2-0.2.f1
-- Rebuilt for https://fedoraproject.org/wiki/Fedora_18_Mass_Rebuild
-
-* Wed Jun 13 2012 Pádraig Brady <P@draigBrady.com> 2012.2-0.1.f1
-- Update to folsom-1 release
-
-* Sun Apr  8 2012 Pádraig Brady <P@draigBrady.com> 2012.1-1
+* Sun Apr 13 2012 Pádraig Brady <P@draigBrady.com> 2012.1-1
 - Update to essex release
 - Include LICENSE (#732695)
 
-* Thu Mar 22 2012 Pádraig Brady <P@draigBrady.com> 2012.1-0.4.rc1
-- Avoid a horizon issue trying to write to /var/www (#801202)
-
-* Wed Mar 21 2012 Pádraig Brady <P@draigBrady.com> 2012.1-0.3.rc1
-- Update to essex-rc1
-
-* Tue Mar 06 2012 Alan Pevec <apevec@redhat.com> 2012.1-0.2.e4
-- Update to essex-4
-
-* Fri Jan 27 2012 Pádraig Brady <P@draigBrady.com> - 2012.1-0.1.e3
-- Update to essex milestone 3
-
-* Sat Jan 14 2012 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 2.6.1-0.5.89bzr
-- Rebuilt for https://fedoraproject.org/wiki/Fedora_17_Mass_Rebuild
+* Tue Aug 30 2011 Matt Domsch <mdomsch@fedoraproject.org> - 2.6.1-0.5.89bzr
+- trivial changes for el6
 
 * Wed Aug 24 2011 Mark McLoughlin <markmc@redhat.com> - 2.6.1-0.4.89bzr
 - Update to latest upstream snapshot
