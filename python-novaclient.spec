@@ -48,7 +48,6 @@ sed -i '/setup_requires/d; /install_requires/d; /dependency_links/d' setup.py
 
 %install
 %{__python} setup.py install -O1 --skip-build --root %{buildroot}
-mv %{buildroot}/usr/novaclient/versioninfo %{buildroot}%{python_sitelib}/novaclient/versioninfo
 
 mkdir -p %{buildroot}%{_sysconfdir}/bash_completion.d
 install -pm 644 tools/nova.bash_completion %{buildroot}%{_sysconfdir}/bash_completion.d/nova
@@ -74,6 +73,9 @@ rm -fr html/.doctrees html/.buildinfo
 %doc html
 
 %changelog
+* Thu Mar 28 2013 Dan Prince <dprince@redhat.com> 2.10.0-2
+- Remove versioninfo file.
+
 * Fri Dec 21 2012 Alan Pevec <apevec@redhat.com> 2.10.0-2
 - Include bash_completion file (#872544) (Alvaro Lopez Ortega)
 - Add dependency on python-iso8601 (#881515)
