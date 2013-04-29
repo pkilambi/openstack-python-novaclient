@@ -48,7 +48,7 @@ sed -i '/setup_requires/d; /install_requires/d; /dependency_links/d' setup.py
 
 %install
 %{__python} setup.py install -O1 --skip-build --root %{buildroot}
-mv %{buildroot}/usr/novaclient/versioninfo %{buildroot}%{python_sitelib}/novaclient/versioninfo
+#mv %{buildroot}/usr/novaclient/versioninfo %{buildroot}%{python_sitelib}/novaclient/versioninfo
 
 mkdir -p %{buildroot}%{_sysconfdir}/bash_completion.d
 install -pm 644 tools/nova.bash_completion %{buildroot}%{_sysconfdir}/bash_completion.d/nova
